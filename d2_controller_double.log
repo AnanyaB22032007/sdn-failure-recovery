@@ -1,0 +1,638 @@
+loading app controller.py
+loading app ryu.controller.ofp_handler
+instantiating app controller.py of AdaptiveRecovery
+instantiating app ryu.controller.ofp_handler of OFPHandler
+BRICK AdaptiveRecovery
+  CONSUMES EventOFPSwitchFeatures
+  CONSUMES EventOFPPortStatus
+  CONSUMES EventOFPFlowStatsReply
+BRICK ofp_event
+  PROVIDES EventOFPSwitchFeatures TO {'AdaptiveRecovery': {'config'}}
+  PROVIDES EventOFPPortStatus TO {'AdaptiveRecovery': {'main'}}
+  PROVIDES EventOFPFlowStatsReply TO {'AdaptiveRecovery': {'main'}}
+  CONSUMES EventOFPEchoReply
+  CONSUMES EventOFPEchoRequest
+  CONSUMES EventOFPErrorMsg
+  CONSUMES EventOFPHello
+  CONSUMES EventOFPPortDescStatsReply
+  CONSUMES EventOFPPortStatus
+  CONSUMES EventOFPSwitchFeatures
+connected socket:<eventlet.greenio.base.GreenSocket object at 0x78a868629810> address:('127.0.0.1', 38694)
+connected socket:<eventlet.greenio.base.GreenSocket object at 0x78a86862bfd0> address:('127.0.0.1', 38708)
+hello ev <ryu.controller.ofp_event.EventOFPHello object at 0x78a86880df10>
+move onto config mode
+EVENT ofp_event->AdaptiveRecovery EventOFPSwitchFeatures
+switch features ev version=0x4,msg_type=0x6,msg_len=0x20,xid=0x12713f9e,OFPSwitchFeatures(auxiliary_id=0,capabilities=79,datapath_id=1,n_buffers=0,n_tables=254)
+SWITCH CONNECTED: s1 (active path: primary)
+move onto main mode
+connected socket:<eventlet.greenio.base.GreenSocket object at 0x78a86880df10> address:('127.0.0.1', 38712)
+hello ev <ryu.controller.ofp_event.EventOFPHello object at 0x78a86862b490>
+move onto config mode
+EVENT ofp_event->AdaptiveRecovery EventOFPSwitchFeatures
+switch features ev version=0x4,msg_type=0x6,msg_len=0x20,xid=0x433789ba,OFPSwitchFeatures(auxiliary_id=0,capabilities=79,datapath_id=2,n_buffers=0,n_tables=254)
+SWITCH CONNECTED: s2 (active path: primary)
+move onto main mode
+connected socket:<eventlet.greenio.base.GreenSocket object at 0x78a8680a9b90> address:('127.0.0.1', 38724)
+hello ev <ryu.controller.ofp_event.EventOFPHello object at 0x78a86864cb90>
+move onto config mode
+EVENT ofp_event->AdaptiveRecovery EventOFPSwitchFeatures
+switch features ev version=0x4,msg_type=0x6,msg_len=0x20,xid=0x47f2dab,OFPSwitchFeatures(auxiliary_id=0,capabilities=79,datapath_id=3,n_buffers=0,n_tables=254)
+SWITCH CONNECTED: s3 (active path: primary)
+move onto main mode
+connected socket:<eventlet.greenio.base.GreenSocket object at 0x78a86864d010> address:('127.0.0.1', 38728)
+hello ev <ryu.controller.ofp_event.EventOFPHello object at 0x78a86865ce90>
+move onto config mode
+EVENT ofp_event->AdaptiveRecovery EventOFPSwitchFeatures
+switch features ev version=0x4,msg_type=0x6,msg_len=0x20,xid=0xdb0790c7,OFPSwitchFeatures(auxiliary_id=0,capabilities=79,datapath_id=4,n_buffers=0,n_tables=254)
+SWITCH CONNECTED: s4 (active path: primary)
+move onto main mode
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2 bytes=196
+STATS s1 in_port=2 pkts=13 bytes=1303
+STATS s4 in_port=1 pkts=3 bytes=282
+STATS s4 in_port=3 pkts=2 bytes=196
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=3 bytes=282
+STATS s2 in_port=2 pkts=8 bytes=877
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=29 bytes=3750
+STATS s4 in_port=3 pkts=5 bytes=446
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=5 bytes=446
+STATS s1 in_port=2 pkts=32 bytes=4152
+STATS s2 in_port=1 pkts=17 bytes=2040
+STATS s2 in_port=2 pkts=18 bytes=2266
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=111 bytes=9169
+STATS s4 in_port=3 pkts=83 bytes=5379
+STATS s1 in_port=1 pkts=84 bytes=5442
+STATS s1 in_port=2 pkts=114 bytes=9578
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=99 bytes=7415
+STATS s2 in_port=2 pkts=98 bytes=7515
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=219 bytes=16321
+STATS s4 in_port=3 pkts=187 bytes=11993
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=188 bytes=12057
+STATS s1 in_port=2 pkts=219 bytes=16393
+STATS s2 in_port=1 pkts=204 bytes=14232
+STATS s2 in_port=2 pkts=203 bytes=14192
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s1 port 2
+LINK DOWN: s1 port 2
+REROUTE primary -> backup (controller reaction 0.53 ms)
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s2 port 1
+LINK DOWN: s2 port 1
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=2 pkts=84 bytes=5418
+STATS s4 in_port=3 pkts=81 bytes=5141
+STATS s1 in_port=1 pkts=83 bytes=5266
+STATS s1 in_port=3 pkts=81 bytes=5228
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s3 in_port=1 pkts=84 bytes=5373
+STATS s3 in_port=2 pkts=81 bytes=5184
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s1 port 3
+LINK DOWN: s1 port 3
+REROUTE backup -> None (controller reaction 0.51 ms)
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s3 port 1
+LINK DOWN: s3 port 1
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s1 port 3
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s3 port 1
+REROUTE None -> backup (controller reaction 0.38 ms)
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s3 in_port=1 pkts=66 bytes=4325
+STATS s3 in_port=2 pkts=63 bytes=4025
+STATS s1 in_port=1 pkts=65 bytes=4147
+STATS s1 in_port=3 pkts=65 bytes=4267
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=2 pkts=65 bytes=4215
+STATS s4 in_port=3 pkts=63 bytes=4025
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=169 bytes=10774
+STATS s1 in_port=3 pkts=179 bytes=12338
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=2 pkts=179 bytes=12286
+STATS s4 in_port=3 pkts=164 bytes=10454
+STATS s3 in_port=1 pkts=180 bytes=12396
+STATS s3 in_port=2 pkts=165 bytes=10524
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s1 port 2
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s2 port 1
+REROUTE backup -> primary (controller reaction 1.03 ms)
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=76 bytes=4842
+STATS s1 in_port=2 pkts=77 bytes=4998
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=85 bytes=5982
+STATS s4 in_port=3 pkts=75 bytes=4778
+STATS s2 in_port=1 pkts=85 bytes=5939
+STATS s2 in_port=2 pkts=75 bytes=4822
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=194 bytes=13405
+STATS s4 in_port=3 pkts=179 bytes=11413
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=180 bytes=11476
+STATS s1 in_port=2 pkts=192 bytes=13161
+STATS s2 in_port=1 pkts=193 bytes=13298
+STATS s2 in_port=2 pkts=180 bytes=11520
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=302 bytes=20464
+STATS s4 in_port=3 pkts=285 bytes=18162
+STATS s1 in_port=1 pkts=285 bytes=18162
+STATS s1 in_port=2 pkts=300 bytes=20218
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=301 bytes=20357
+STATS s2 in_port=2 pkts=286 bytes=18269
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=422 bytes=28114
+STATS s4 in_port=3 pkts=405 bytes=25806
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=405 bytes=25806
+STATS s1 in_port=2 pkts=422 bytes=28135
+STATS s2 in_port=1 pkts=421 bytes=28007
+STATS s2 in_port=2 pkts=405 bytes=25850
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=438 bytes=29174
+STATS s4 in_port=3 pkts=420 bytes=26759
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=437 bytes=29067
+STATS s2 in_port=2 pkts=421 bytes=26866
+STATS s1 in_port=1 pkts=419 bytes=26695
+STATS s1 in_port=2 pkts=439 bytes=29258
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=419 bytes=26695
+STATS s1 in_port=2 pkts=439 bytes=29258
+STATS s4 in_port=1 pkts=438 bytes=29174
+STATS s4 in_port=3 pkts=420 bytes=26759
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=437 bytes=29067
+STATS s2 in_port=2 pkts=421 bytes=26866
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=438 bytes=29174
+STATS s4 in_port=3 pkts=421 bytes=26829
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=437 bytes=29067
+STATS s2 in_port=2 pkts=422 bytes=26936
+STATS s1 in_port=1 pkts=419 bytes=26695
+STATS s1 in_port=2 pkts=440 bytes=29328
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=440 bytes=29314
+STATS s4 in_port=3 pkts=421 bytes=26829
+STATS s1 in_port=1 pkts=420 bytes=26765
+STATS s1 in_port=2 pkts=442 bytes=29468
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=439 bytes=29207
+STATS s2 in_port=2 pkts=423 bytes=27006
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=420 bytes=26765
+STATS s1 in_port=2 pkts=444 bytes=29682
+STATS s4 in_port=1 pkts=443 bytes=29598
+STATS s4 in_port=3 pkts=421 bytes=26829
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=440 bytes=29314
+STATS s2 in_port=2 pkts=424 bytes=27113
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=443 bytes=29598
+STATS s4 in_port=3 pkts=421 bytes=26829
+STATS s1 in_port=1 pkts=420 bytes=26765
+STATS s1 in_port=2 pkts=444 bytes=29682
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=440 bytes=29314
+STATS s2 in_port=2 pkts=424 bytes=27113
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=420 bytes=26765
+STATS s1 in_port=2 pkts=444 bytes=29682
+STATS s2 in_port=1 pkts=440 bytes=29314
+STATS s2 in_port=2 pkts=424 bytes=27113
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=443 bytes=29598
+STATS s4 in_port=3 pkts=421 bytes=26829
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=443 bytes=29598
+STATS s4 in_port=3 pkts=421 bytes=26829
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=420 bytes=26765
+STATS s1 in_port=2 pkts=444 bytes=29682
+STATS s2 in_port=1 pkts=440 bytes=29314
+STATS s2 in_port=2 pkts=424 bytes=27113
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=443 bytes=29598
+STATS s4 in_port=3 pkts=421 bytes=26829
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=420 bytes=26765
+STATS s1 in_port=2 pkts=444 bytes=29682
+STATS s2 in_port=1 pkts=440 bytes=29314
+STATS s2 in_port=2 pkts=424 bytes=27113
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=443 bytes=29598
+STATS s4 in_port=3 pkts=421 bytes=26829
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=440 bytes=29314
+STATS s2 in_port=2 pkts=424 bytes=27113
+STATS s1 in_port=1 pkts=420 bytes=26765
+STATS s1 in_port=2 pkts=444 bytes=29682
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=420 bytes=26765
+STATS s1 in_port=2 pkts=445 bytes=29752
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=443 bytes=29598
+STATS s4 in_port=3 pkts=421 bytes=26829
+STATS s2 in_port=1 pkts=440 bytes=29314
+STATS s2 in_port=2 pkts=424 bytes=27113
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=444 bytes=29668
+STATS s4 in_port=3 pkts=421 bytes=26829
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=441 bytes=29384
+STATS s2 in_port=2 pkts=424 bytes=27113
+STATS s1 in_port=1 pkts=420 bytes=26765
+STATS s1 in_port=2 pkts=445 bytes=29752
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=445 bytes=29775
+STATS s4 in_port=3 pkts=421 bytes=26829
+STATS s1 in_port=1 pkts=420 bytes=26765
+STATS s1 in_port=2 pkts=446 bytes=29859
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=442 bytes=29491
+STATS s2 in_port=2 pkts=424 bytes=27113
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=445 bytes=29775
+STATS s4 in_port=3 pkts=421 bytes=26829
+STATS s1 in_port=1 pkts=420 bytes=26765
+STATS s1 in_port=2 pkts=446 bytes=29859
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=442 bytes=29491
+STATS s2 in_port=2 pkts=424 bytes=27113
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=445 bytes=29775
+STATS s4 in_port=3 pkts=421 bytes=26829
+STATS s1 in_port=1 pkts=420 bytes=26765
+STATS s1 in_port=2 pkts=446 bytes=29859
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=442 bytes=29491
+STATS s2 in_port=2 pkts=424 bytes=27113
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=445 bytes=29775
+STATS s4 in_port=3 pkts=421 bytes=26829
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=442 bytes=29491
+STATS s2 in_port=2 pkts=424 bytes=27113
+STATS s1 in_port=1 pkts=420 bytes=26765
+STATS s1 in_port=2 pkts=446 bytes=29859
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=445 bytes=29775
+STATS s4 in_port=3 pkts=421 bytes=26829
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=442 bytes=29491
+STATS s2 in_port=2 pkts=424 bytes=27113
+STATS s1 in_port=1 pkts=420 bytes=26765
+STATS s1 in_port=2 pkts=446 bytes=29859
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=420 bytes=26765
+STATS s1 in_port=2 pkts=447 bytes=29929
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=442 bytes=29491
+STATS s2 in_port=2 pkts=425 bytes=27183
+STATS s4 in_port=1 pkts=445 bytes=29775
+STATS s4 in_port=3 pkts=422 bytes=26899
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=445 bytes=29775
+STATS s4 in_port=3 pkts=422 bytes=26899
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=442 bytes=29491
+STATS s2 in_port=2 pkts=425 bytes=27183
+STATS s1 in_port=1 pkts=420 bytes=26765
+STATS s1 in_port=2 pkts=447 bytes=29929
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=420 bytes=26765
+STATS s1 in_port=2 pkts=447 bytes=29929
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=442 bytes=29491
+STATS s2 in_port=2 pkts=425 bytes=27183
+STATS s4 in_port=1 pkts=445 bytes=29775
+STATS s4 in_port=3 pkts=422 bytes=26899
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=420 bytes=26765
+STATS s1 in_port=2 pkts=448 bytes=30036
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=442 bytes=29491
+STATS s2 in_port=2 pkts=426 bytes=27290
+STATS s4 in_port=1 pkts=446 bytes=29882
+STATS s4 in_port=3 pkts=422 bytes=26899
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=421 bytes=26835
+STATS s1 in_port=2 pkts=449 bytes=30106
+STATS s4 in_port=1 pkts=447 bytes=29952
+STATS s4 in_port=3 pkts=422 bytes=26899
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=443 bytes=29561
+STATS s2 in_port=2 pkts=427 bytes=27360
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=421 bytes=26835
+STATS s1 in_port=2 pkts=449 bytes=30106
+STATS s4 in_port=1 pkts=447 bytes=29952
+STATS s4 in_port=3 pkts=422 bytes=26899
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=443 bytes=29561
+STATS s2 in_port=2 pkts=427 bytes=27360
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s1 port 1
+LINK UP: s1 port 1
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s2 port 1
+LINK UP: s1 port 2
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s1 port 3
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s3 port 1
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s4 port 1
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s2 port 2
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s4 port 3
+LINK UP: s4 port 2
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s3 port 2
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38708) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38712) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38724) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 38728) discarded.

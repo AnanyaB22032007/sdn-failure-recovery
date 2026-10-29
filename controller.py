@@ -1,41 +1,40 @@
-from os_ken.base import app_manager
-from os_ken.controller import ofp_event
-from os_ken.controller.handler import CONFIG_DISPATCHER, MAIN_DISPATCHER, set_ev_cls
-from os_ken.ofproto import ofproto_v1_3
-from os_ken.lib import hub
 import time
+from ryu.base import app_manager
+from ryu.controller import ofp_event
+from ryu.controller.handler import CONFIG_DISPATCHER, MAIN_DISPATCHER, set_ev_cls
+from ryu.ofproto import ofproto_v1_3
+from ryu.lib import hub
 
-# {switch_id: {in_port: out_port}}
+# {dpid: {in_port: out_port}}  matches topo.py port numbers
 PATHS = {
     'primary': {1: {1: 2, 2: 1}, 2: {1: 2, 2: 1}, 4: {1: 3, 3: 1}},
     'backup':  {1: {1: 3, 3: 1}, 3: {1: 2, 2: 1}, 4: {2: 3, 3: 2}},
 }
 
-class FailureRecovery(app_manager.OSKenApp):
+
+class AdaptiveRecovery(app_manager.RyuApp):
     OFP_VERSIONS = [ofproto_v1_3.OFP_VERSION]
 
-    def __init__(self, *a, **k):
-        super().__init__(*a, **k)
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         self.dps = {}
         self.down = set()
-        self.active = None
+        self.active = 'primary'
         hub.spawn(self.stats_loop)
 
-    @set_ev_cls(ofp_event.EventOFPSwitchFeatures, CONFIG_DISPATCHER)
-    def on_connect(self, ev):
-        dp = ev.msg.datapath
-        self.dps[dp.id] = dp
-        if self.active is None:
-            self.active = 'primary'
-        self.install(dp, self.active)
-        self.logger.info("Switch s%s connected, path=%s", dp.id, self.active)
-
     def path_ok(self, name):
-        for sw, m in PATHS[name].items():
-            for a, b in m.items():
-                if (sw, a) in self.down or (sw, b) in self.down:
+        for dpid, m in PATHS[name].items():
+            for in_p, out_p in m.items():
+                if (dpid, in_p) in self.down or (dpid, out_p) in self.down:
                     return False
         return True
+
+    @set_ev_cls(ofp_event.EventOFPSwitchFeatures, CONFIG_DISPATCHER)
+    def on_features(self, ev):
+        dp = ev.msg.datapath
+        self.dps[dp.id] = dp
+        self.logger.info("SWITCH CONNECTED: s%s (active path: %s)", dp.id, self.active)
+        self.install(dp, self.active)
 
     @set_ev_cls(ofp_event.EventOFPPortStatus, MAIN_DISPATCHER)
     def on_port_status(self, ev):

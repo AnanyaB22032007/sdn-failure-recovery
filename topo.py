@@ -6,6 +6,22 @@ from mininet.link import TCLink
 from mininet.cli import CLI
 from mininet.log import setLogLevel
 
+SCENS = ('baseline', 'single', 'flap', 'double', 'loss')
+SCEN = next((a for a in sys.argv[1:] if a in SCENS), 'single')
+AUTO = 'auto' in sys.argv or any(a in SCENS for a in sys.argv[1:])
+
+# (seconds after start, action, switchA, switchB)
+EVENTS = {
+    'baseline': [],
+    'single':   [(5, 'down', 's1', 's2'), (13, 'up', 's1', 's2')],
+    'flap':     [(4, 'down', 's1', 's2'), (6, 'up', 's1', 's2'),
+                 (8, 'down', 's1', 's2'), (10, 'up', 's1', 's2'),
+                 (12, 'down', 's1', 's2'), (14, 'up', 's1', 's2')],
+    'double':   [(4, 'down', 's1', 's2'), (7, 'down', 's1', 's3'),
+                 (9, 'up', 's1', 's3'), (12, 'up', 's1', 's2')],
+    'loss':     [(5, 'down', 's1', 's2'), (13, 'up', 's1', 's2')],
+}
+
 def run():
     net = Mininet(controller=None, link=TCLink,
                   switch=lambda n, **kw: OVSSwitch(n, protocols='OpenFlow13', **kw))
@@ -24,13 +40,23 @@ def run():
     time.sleep(3)
     print(net.pingAll())
 
-    if 'auto' in sys.argv:
+    if SCEN == 'loss':
+        for l in net.links:
+            l.intf1.config(delay='5ms', loss=3)
+            l.intf2.config(delay='5ms', loss=3)
+        print('*** 3% packet loss added on all links')
+
+    if AUTO:
+        print('*** SCENARIO:', SCEN)
         h2.cmd('python3 server.py &')
-        def fail():
-            time.sleep(5);  print('*** FAILING s1-s2');  net.configLinkStatus('s1', 's2', 'down')
-            time.sleep(8);  print('*** RESTORING s1-s2'); net.configLinkStatus('s1', 's2', 'up')
-        threading.Thread(target=fail, daemon=True).start()
-        print(h1.cmd('python3 client.py 10.0.0.2 1000'))
+        def events():
+            t0 = time.time()
+            for t, act, a, b in EVENTS[SCEN]:
+                time.sleep(max(0, t0 + t - time.time()))
+                print(f'*** t={t}s  {a}-{b} {act.upper()}')
+                net.configLinkStatus(a, b, act)
+        threading.Thread(target=events, daemon=True).start()
+        print(h1.cmd(f'python3 client.py 10.0.0.2 1000 {SCEN}'))
     CLI(net)
     net.stop()
 

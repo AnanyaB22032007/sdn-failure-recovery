@@ -1,2 +1,4 @@
 __pycache__/
 *.pyc
+*_d1_backup.py
+__pycache__/
