@@ -1,0 +1,1495 @@
+loading app controller.py
+loading app ryu.controller.ofp_handler
+instantiating app controller.py of AdaptiveRecovery
+instantiating app ryu.controller.ofp_handler of OFPHandler
+BRICK AdaptiveRecovery
+  CONSUMES EventOFPSwitchFeatures
+  CONSUMES EventOFPPortStatus
+  CONSUMES EventOFPFlowStatsReply
+BRICK ofp_event
+  PROVIDES EventOFPSwitchFeatures TO {'AdaptiveRecovery': {'config'}}
+  PROVIDES EventOFPPortStatus TO {'AdaptiveRecovery': {'main'}}
+  PROVIDES EventOFPFlowStatsReply TO {'AdaptiveRecovery': {'main'}}
+  CONSUMES EventOFPEchoReply
+  CONSUMES EventOFPEchoRequest
+  CONSUMES EventOFPErrorMsg
+  CONSUMES EventOFPHello
+  CONSUMES EventOFPPortDescStatsReply
+  CONSUMES EventOFPPortStatus
+  CONSUMES EventOFPSwitchFeatures
+connected socket:<eventlet.greenio.base.GreenSocket object at 0x7bc4dd55a6d0> address:('127.0.0.1', 36876)
+connected socket:<eventlet.greenio.base.GreenSocket object at 0x7bc4dd55b9d0> address:('127.0.0.1', 36886)
+hello ev <ryu.controller.ofp_event.EventOFPHello object at 0x7bc4dd68f410>
+move onto config mode
+EVENT ofp_event->AdaptiveRecovery EventOFPSwitchFeatures
+switch features ev version=0x4,msg_type=0x6,msg_len=0x20,xid=0xd0555327,OFPSwitchFeatures(auxiliary_id=0,capabilities=79,datapath_id=1,n_buffers=0,n_tables=254)
+SWITCH CONNECTED: s1 (active path: primary)
+move onto main mode
+connected socket:<eventlet.greenio.base.GreenSocket object at 0x7bc4dd63b7d0> address:('127.0.0.1', 36898)
+hello ev <ryu.controller.ofp_event.EventOFPHello object at 0x7bc4dd51ea10>
+move onto config mode
+EVENT ofp_event->AdaptiveRecovery EventOFPSwitchFeatures
+switch features ev version=0x4,msg_type=0x6,msg_len=0x20,xid=0x3ba98b5f,OFPSwitchFeatures(auxiliary_id=0,capabilities=79,datapath_id=2,n_buffers=0,n_tables=254)
+SWITCH CONNECTED: s2 (active path: primary)
+move onto main mode
+connected socket:<eventlet.greenio.base.GreenSocket object at 0x7bc4dd51c3d0> address:('127.0.0.1', 41536)
+hello ev <ryu.controller.ofp_event.EventOFPHello object at 0x7bc4dd097950>
+move onto config mode
+EVENT ofp_event->AdaptiveRecovery EventOFPSwitchFeatures
+switch features ev version=0x4,msg_type=0x6,msg_len=0x20,xid=0x6c9fdfd4,OFPSwitchFeatures(auxiliary_id=0,capabilities=79,datapath_id=3,n_buffers=0,n_tables=254)
+SWITCH CONNECTED: s3 (active path: primary)
+move onto main mode
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2 bytes=196
+STATS s1 in_port=2 pkts=1 bytes=90
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=2 bytes=196
+STATS s2 in_port=2 pkts=1 bytes=90
+connected socket:<eventlet.greenio.base.GreenSocket object at 0x7bc4dd097310> address:('127.0.0.1', 41544)
+hello ev <ryu.controller.ofp_event.EventOFPHello object at 0x7bc4dd6ce690>
+move onto config mode
+EVENT ofp_event->AdaptiveRecovery EventOFPSwitchFeatures
+switch features ev version=0x4,msg_type=0x6,msg_len=0x20,xid=0xf1b2ace5,OFPSwitchFeatures(auxiliary_id=0,capabilities=79,datapath_id=4,n_buffers=0,n_tables=254)
+SWITCH CONNECTED: s4 (active path: primary)
+move onto main mode
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=5 bytes=446
+STATS s1 in_port=2 pkts=25 bytes=3533
+STATS s4 in_port=1 pkts=23 bytes=3357
+STATS s4 in_port=3 pkts=3 bytes=246
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=16 bytes=2146
+STATS s2 in_port=2 pkts=14 bytes=1833
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=5 bytes=446
+STATS s1 in_port=2 pkts=33 bytes=5477
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=18 bytes=2551
+STATS s2 in_port=2 pkts=17 bytes=2328
+STATS s4 in_port=1 pkts=28 bytes=4257
+STATS s4 in_port=3 pkts=4 bytes=336
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=102 bytes=9374
+STATS s4 in_port=3 pkts=71 bytes=4573
+STATS s1 in_port=1 pkts=74 bytes=4816
+STATS s1 in_port=2 pkts=104 bytes=10399
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=89 bytes=7193
+STATS s2 in_port=2 pkts=87 bytes=7040
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=194 bytes=12422
+STATS s1 in_port=2 pkts=227 bytes=19278
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=211 bytes=15892
+STATS s2 in_port=2 pkts=207 bytes=14790
+STATS s4 in_port=1 pkts=225 bytes=18276
+STATS s4 in_port=3 pkts=191 bytes=12184
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s1 port 2
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK DOWN: s1 port 2
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s2 port 1
+LINK DOWN: s2 port 1
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=286 bytes=20703
+STATS s2 in_port=2 pkts=284 bytes=19681
+STATS s1 in_port=1 pkts=400 bytes=25569
+STATS s1 in_port=2 pkts=301 bytes=23999
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=302 bytes=23267
+STATS s4 in_port=3 pkts=267 bytes=17011
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=303 bytes=24131
+STATS s4 in_port=3 pkts=269 bytes=17095
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=286 bytes=20703
+STATS s2 in_port=2 pkts=289 bytes=20809
+STATS s1 in_port=1 pkts=723 bytes=46160
+STATS s1 in_port=2 pkts=301 bytes=23999
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=1181 bytes=75362
+STATS s1 in_port=2 pkts=301 bytes=23999
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=286 bytes=20703
+STATS s2 in_port=2 pkts=292 bytes=22607
+STATS s4 in_port=1 pkts=307 bytes=26793
+STATS s4 in_port=3 pkts=269 bytes=17095
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=1545 bytes=98583
+STATS s1 in_port=2 pkts=301 bytes=23999
+STATS s2 in_port=1 pkts=286 bytes=20703
+STATS s2 in_port=2 pkts=294 bytes=23541
+STATS s4 in_port=1 pkts=307 bytes=26793
+STATS s4 in_port=3 pkts=270 bytes=17165
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s1 port 2
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s2 port 1
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=1892 bytes=120685
+STATS s1 in_port=2 pkts=356 bytes=27536
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=343 bytes=24367
+STATS s2 in_port=2 pkts=349 bytes=27168
+STATS s4 in_port=1 pkts=365 bytes=30660
+STATS s4 in_port=3 pkts=324 bytes=20589
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=477 bytes=38676
+STATS s4 in_port=3 pkts=425 bytes=27019
+STATS s1 in_port=1 pkts=1993 bytes=127114
+STATS s1 in_port=2 pkts=469 bytes=35835
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=455 bytes=32383
+STATS s2 in_port=2 pkts=449 bytes=33534
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=580 bytes=45554
+STATS s4 in_port=3 pkts=525 bytes=33401
+STATS s1 in_port=1 pkts=2094 bytes=133561
+STATS s1 in_port=2 pkts=572 bytes=43486
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=558 bytes=39261
+STATS s2 in_port=2 pkts=550 bytes=39980
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2194 bytes=139938
+STATS s1 in_port=2 pkts=678 bytes=52791
+STATS s4 in_port=1 pkts=688 bytes=55952
+STATS s4 in_port=3 pkts=625 bytes=39778
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=667 bytes=49723
+STATS s2 in_port=2 pkts=650 bytes=46357
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2218 bytes=141469
+STATS s1 in_port=2 pkts=705 bytes=54653
+STATS s4 in_port=1 pkts=714 bytes=57750
+STATS s4 in_port=3 pkts=651 bytes=41437
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=692 bytes=51457
+STATS s2 in_port=2 pkts=677 bytes=48086
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=715 bytes=57820
+STATS s4 in_port=3 pkts=651 bytes=41437
+STATS s1 in_port=1 pkts=2218 bytes=141469
+STATS s1 in_port=2 pkts=706 bytes=54723
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=692 bytes=51457
+STATS s2 in_port=2 pkts=677 bytes=48086
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=715 bytes=57820
+STATS s4 in_port=3 pkts=651 bytes=41437
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=692 bytes=51457
+STATS s2 in_port=2 pkts=677 bytes=48086
+STATS s1 in_port=1 pkts=2218 bytes=141469
+STATS s1 in_port=2 pkts=707 bytes=54793
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=718 bytes=58163
+STATS s4 in_port=3 pkts=651 bytes=41437
+STATS s1 in_port=1 pkts=2219 bytes=141539
+STATS s1 in_port=2 pkts=708 bytes=54996
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=694 bytes=51597
+STATS s2 in_port=2 pkts=678 bytes=48289
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=719 bytes=58366
+STATS s4 in_port=3 pkts=652 bytes=41507
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2219 bytes=141539
+STATS s1 in_port=2 pkts=710 bytes=55269
+STATS s2 in_port=1 pkts=695 bytes=51800
+STATS s2 in_port=2 pkts=679 bytes=48359
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=719 bytes=58366
+STATS s4 in_port=3 pkts=652 bytes=41507
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2219 bytes=141539
+STATS s1 in_port=2 pkts=710 bytes=55269
+STATS s2 in_port=1 pkts=695 bytes=51800
+STATS s2 in_port=2 pkts=679 bytes=48359
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=719 bytes=58366
+STATS s4 in_port=3 pkts=652 bytes=41507
+STATS s1 in_port=1 pkts=2219 bytes=141539
+STATS s1 in_port=2 pkts=710 bytes=55269
+STATS s2 in_port=1 pkts=695 bytes=51800
+STATS s2 in_port=2 pkts=679 bytes=48359
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=719 bytes=58366
+STATS s4 in_port=3 pkts=652 bytes=41507
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2219 bytes=141539
+STATS s1 in_port=2 pkts=710 bytes=55269
+STATS s2 in_port=1 pkts=695 bytes=51800
+STATS s2 in_port=2 pkts=679 bytes=48359
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2219 bytes=141539
+STATS s1 in_port=2 pkts=710 bytes=55269
+STATS s2 in_port=1 pkts=695 bytes=51800
+STATS s2 in_port=2 pkts=679 bytes=48359
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=719 bytes=58366
+STATS s4 in_port=3 pkts=652 bytes=41507
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2219 bytes=141539
+STATS s1 in_port=2 pkts=710 bytes=55269
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=695 bytes=51800
+STATS s2 in_port=2 pkts=679 bytes=48359
+STATS s4 in_port=1 pkts=719 bytes=58366
+STATS s4 in_port=3 pkts=652 bytes=41507
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2219 bytes=141539
+STATS s1 in_port=2 pkts=711 bytes=55339
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=696 bytes=51870
+STATS s2 in_port=2 pkts=679 bytes=48359
+STATS s4 in_port=1 pkts=720 bytes=58436
+STATS s4 in_port=3 pkts=652 bytes=41507
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2219 bytes=141539
+STATS s1 in_port=2 pkts=711 bytes=55339
+STATS s4 in_port=1 pkts=720 bytes=58436
+STATS s4 in_port=3 pkts=652 bytes=41507
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=696 bytes=51870
+STATS s2 in_port=2 pkts=679 bytes=48359
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=721 bytes=58639
+STATS s4 in_port=3 pkts=652 bytes=41507
+STATS s1 in_port=1 pkts=2219 bytes=141539
+STATS s1 in_port=2 pkts=712 bytes=55542
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=697 bytes=52073
+STATS s2 in_port=2 pkts=679 bytes=48359
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=721 bytes=58639
+STATS s4 in_port=3 pkts=652 bytes=41507
+STATS s1 in_port=1 pkts=2219 bytes=141539
+STATS s1 in_port=2 pkts=712 bytes=55542
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=697 bytes=52073
+STATS s2 in_port=2 pkts=679 bytes=48359
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2219 bytes=141539
+STATS s1 in_port=2 pkts=713 bytes=55612
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=721 bytes=58639
+STATS s4 in_port=3 pkts=652 bytes=41507
+STATS s2 in_port=1 pkts=697 bytes=52073
+STATS s2 in_port=2 pkts=680 bytes=48429
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=721 bytes=58639
+STATS s4 in_port=3 pkts=652 bytes=41507
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=697 bytes=52073
+STATS s2 in_port=2 pkts=680 bytes=48429
+STATS s1 in_port=1 pkts=2219 bytes=141539
+STATS s1 in_port=2 pkts=713 bytes=55612
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2219 bytes=141539
+STATS s1 in_port=2 pkts=713 bytes=55612
+STATS s4 in_port=1 pkts=721 bytes=58639
+STATS s4 in_port=3 pkts=652 bytes=41507
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=697 bytes=52073
+STATS s2 in_port=2 pkts=680 bytes=48429
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2219 bytes=141539
+STATS s1 in_port=2 pkts=713 bytes=55612
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=722 bytes=58709
+STATS s4 in_port=3 pkts=652 bytes=41507
+STATS s2 in_port=1 pkts=697 bytes=52073
+STATS s2 in_port=2 pkts=680 bytes=48429
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=722 bytes=58709
+STATS s4 in_port=3 pkts=652 bytes=41507
+STATS s1 in_port=1 pkts=2219 bytes=141539
+STATS s1 in_port=2 pkts=713 bytes=55612
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=697 bytes=52073
+STATS s2 in_port=2 pkts=680 bytes=48429
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=722 bytes=58709
+STATS s4 in_port=3 pkts=652 bytes=41507
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2219 bytes=141539
+STATS s1 in_port=2 pkts=714 bytes=55815
+STATS s2 in_port=1 pkts=697 bytes=52073
+STATS s2 in_port=2 pkts=681 bytes=48632
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2219 bytes=141539
+STATS s1 in_port=2 pkts=714 bytes=55815
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=697 bytes=52073
+STATS s2 in_port=2 pkts=681 bytes=48632
+STATS s4 in_port=1 pkts=723 bytes=58912
+STATS s4 in_port=3 pkts=652 bytes=41507
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=723 bytes=58912
+STATS s4 in_port=3 pkts=652 bytes=41507
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=714 bytes=55815
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=698 bytes=52143
+STATS s2 in_port=2 pkts=681 bytes=48632
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=724 bytes=58982
+STATS s4 in_port=3 pkts=652 bytes=41507
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=714 bytes=55815
+STATS s2 in_port=1 pkts=698 bytes=52143
+STATS s2 in_port=2 pkts=681 bytes=48632
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=714 bytes=55815
+STATS s4 in_port=1 pkts=724 bytes=58982
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=698 bytes=52143
+STATS s2 in_port=2 pkts=681 bytes=48632
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=724 bytes=58982
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=698 bytes=52143
+STATS s2 in_port=2 pkts=682 bytes=48702
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=715 bytes=55885
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=716 bytes=55955
+STATS s4 in_port=1 pkts=725 bytes=59052
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=699 bytes=52213
+STATS s2 in_port=2 pkts=682 bytes=48702
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=699 bytes=52213
+STATS s2 in_port=2 pkts=682 bytes=48702
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=716 bytes=55955
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=725 bytes=59052
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=699 bytes=52213
+STATS s2 in_port=2 pkts=682 bytes=48702
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=716 bytes=55955
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=725 bytes=59052
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=717 bytes=56158
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=726 bytes=59255
+STATS s4 in_port=3 pkts=653 bytes=41577
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=682 bytes=48702
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=717 bytes=56158
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=682 bytes=48702
+STATS s4 in_port=1 pkts=726 bytes=59255
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=682 bytes=48702
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=717 bytes=56158
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=726 bytes=59255
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=726 bytes=59255
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=682 bytes=48702
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=717 bytes=56158
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=726 bytes=59255
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=717 bytes=56158
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=682 bytes=48702
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=726 bytes=59255
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=717 bytes=56158
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=682 bytes=48702
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=717 bytes=56158
+STATS s4 in_port=1 pkts=726 bytes=59255
+STATS s4 in_port=3 pkts=653 bytes=41577
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=682 bytes=48702
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=726 bytes=59255
+STATS s4 in_port=3 pkts=653 bytes=41577
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=717 bytes=56158
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=682 bytes=48702
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=726 bytes=59255
+STATS s4 in_port=3 pkts=653 bytes=41577
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=717 bytes=56158
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=682 bytes=48702
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=682 bytes=48702
+STATS s4 in_port=1 pkts=726 bytes=59255
+STATS s4 in_port=3 pkts=653 bytes=41577
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=717 bytes=56158
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=726 bytes=59255
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=682 bytes=48702
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=717 bytes=56158
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=717 bytes=56158
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=682 bytes=48702
+STATS s4 in_port=1 pkts=726 bytes=59255
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=717 bytes=56158
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=682 bytes=48702
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=726 bytes=59255
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=717 bytes=56158
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=682 bytes=48702
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=726 bytes=59255
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=718 bytes=56228
+STATS s4 in_port=1 pkts=726 bytes=59255
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=683 bytes=48772
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=718 bytes=56228
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=683 bytes=48772
+STATS s4 in_port=1 pkts=726 bytes=59255
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=718 bytes=56228
+STATS s4 in_port=1 pkts=726 bytes=59255
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=683 bytes=48772
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=718 bytes=56228
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=683 bytes=48772
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=726 bytes=59255
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=718 bytes=56228
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=726 bytes=59255
+STATS s4 in_port=3 pkts=653 bytes=41577
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=683 bytes=48772
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=726 bytes=59255
+STATS s4 in_port=3 pkts=653 bytes=41577
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=718 bytes=56228
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=683 bytes=48772
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=718 bytes=56228
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=727 bytes=59325
+STATS s4 in_port=3 pkts=653 bytes=41577
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=683 bytes=48772
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=727 bytes=59325
+STATS s4 in_port=3 pkts=653 bytes=41577
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=718 bytes=56228
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=683 bytes=48772
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=718 bytes=56228
+STATS s4 in_port=1 pkts=727 bytes=59325
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=683 bytes=48772
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=719 bytes=56431
+STATS s4 in_port=1 pkts=728 bytes=59528
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=684 bytes=48975
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=719 bytes=56431
+STATS s4 in_port=1 pkts=728 bytes=59528
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=684 bytes=48975
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=728 bytes=59528
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=684 bytes=48975
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=719 bytes=56431
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=728 bytes=59528
+STATS s4 in_port=3 pkts=653 bytes=41577
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=719 bytes=56431
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=684 bytes=48975
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=700 bytes=52416
+STATS s2 in_port=2 pkts=684 bytes=48975
+STATS s4 in_port=1 pkts=728 bytes=59528
+STATS s4 in_port=3 pkts=653 bytes=41577
+STATS s1 in_port=1 pkts=2220 bytes=141609
+STATS s1 in_port=2 pkts=719 bytes=56431
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=730 bytes=59668
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=702 bytes=52556
+STATS s2 in_port=2 pkts=684 bytes=48975
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=719 bytes=56431
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=719 bytes=56431
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=702 bytes=52556
+STATS s2 in_port=2 pkts=684 bytes=48975
+STATS s4 in_port=1 pkts=730 bytes=59668
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=730 bytes=59668
+STATS s4 in_port=3 pkts=653 bytes=41577
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=720 bytes=56501
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=702 bytes=52556
+STATS s2 in_port=2 pkts=684 bytes=48975
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=720 bytes=56501
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=702 bytes=52556
+STATS s2 in_port=2 pkts=684 bytes=48975
+STATS s4 in_port=1 pkts=730 bytes=59668
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=721 bytes=56704
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=684 bytes=48975
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=721 bytes=56704
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=684 bytes=48975
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=721 bytes=56704
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=684 bytes=48975
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=721 bytes=56704
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=684 bytes=48975
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=653 bytes=41577
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=722 bytes=56774
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=685 bytes=49045
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=723 bytes=56844
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=686 bytes=49115
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=723 bytes=56844
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=686 bytes=49115
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=686 bytes=49115
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=723 bytes=56844
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=723 bytes=56844
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=686 bytes=49115
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=723 bytes=56844
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=686 bytes=49115
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=686 bytes=49115
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=723 bytes=56844
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=723 bytes=56844
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=686 bytes=49115
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=723 bytes=56844
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=686 bytes=49115
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=723 bytes=56844
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=686 bytes=49115
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=723 bytes=56844
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=686 bytes=49115
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=723 bytes=56844
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=686 bytes=49115
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=723 bytes=56844
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=686 bytes=49115
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=723 bytes=56844
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=686 bytes=49115
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=723 bytes=56844
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=686 bytes=49115
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=686 bytes=49115
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=723 bytes=56844
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=731 bytes=59871
+STATS s4 in_port=3 pkts=654 bytes=41647
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=723 bytes=56844
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=686 bytes=49115
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=732 bytes=59941
+STATS s4 in_port=3 pkts=654 bytes=41647
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=723 bytes=56844
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=686 bytes=49115
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=732 bytes=59941
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=703 bytes=52759
+STATS s2 in_port=2 pkts=686 bytes=49115
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=723 bytes=56844
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=733 bytes=60011
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=704 bytes=52829
+STATS s2 in_port=2 pkts=686 bytes=49115
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=723 bytes=56844
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=733 bytes=60011
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=704 bytes=52829
+STATS s2 in_port=2 pkts=686 bytes=49115
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=723 bytes=56844
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=724 bytes=57047
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=734 bytes=60214
+STATS s4 in_port=3 pkts=654 bytes=41647
+STATS s2 in_port=1 pkts=704 bytes=52829
+STATS s2 in_port=2 pkts=687 bytes=49318
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=724 bytes=57047
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=734 bytes=60214
+STATS s4 in_port=3 pkts=654 bytes=41647
+STATS s2 in_port=1 pkts=704 bytes=52829
+STATS s2 in_port=2 pkts=687 bytes=49318
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=724 bytes=57047
+STATS s4 in_port=1 pkts=734 bytes=60214
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=704 bytes=52829
+STATS s2 in_port=2 pkts=687 bytes=49318
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=734 bytes=60214
+STATS s4 in_port=3 pkts=654 bytes=41647
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=724 bytes=57047
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=704 bytes=52829
+STATS s2 in_port=2 pkts=687 bytes=49318
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=724 bytes=57047
+STATS s4 in_port=1 pkts=734 bytes=60214
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=704 bytes=52829
+STATS s2 in_port=2 pkts=687 bytes=49318
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s1 port 1
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s1 port 1
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s1 port 2
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s2 port 1
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s1 port 3
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s3 port 1
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s4 in_port=1 pkts=734 bytes=60214
+STATS s4 in_port=3 pkts=654 bytes=41647
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s1 in_port=1 pkts=2221 bytes=141679
+STATS s1 in_port=2 pkts=724 bytes=57047
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+EVENT ofp_event->AdaptiveRecovery EventOFPFlowStatsReply
+STATS s2 in_port=1 pkts=704 bytes=52829
+STATS s2 in_port=2 pkts=687 bytes=49318
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s4 port 1
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s3 port 2
+LINK UP: s2 port 2
+LINK UP: s4 port 2
+EVENT ofp_event->AdaptiveRecovery EventOFPPortStatus
+LINK UP: s4 port 3
+Datapath in process of terminating; send() to ('127.0.0.1', 36886) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36898) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41536) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41544) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36886) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36898) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41536) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41544) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36886) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36898) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41536) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41544) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36886) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36898) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41536) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41544) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36886) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36898) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41536) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41544) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36886) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36898) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41536) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41544) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36886) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36898) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41536) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41544) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36886) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36898) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41536) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41544) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36886) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36898) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41536) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41544) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36886) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36898) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41536) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41544) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36886) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36898) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41536) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41544) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36886) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36898) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41536) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41544) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36886) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36898) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41536) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41544) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36886) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36898) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41536) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41544) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36886) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36898) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41536) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41544) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36886) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36898) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41536) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41544) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36886) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36898) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41536) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41544) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36886) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36898) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41536) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41544) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36886) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 36898) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41536) discarded.
+Datapath in process of terminating; send() to ('127.0.0.1', 41544) discarded.

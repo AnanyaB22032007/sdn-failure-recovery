@@ -6,13 +6,14 @@ from mininet.link import TCLink
 from mininet.cli import CLI
 from mininet.log import setLogLevel
 
-SCENS = ('baseline', 'single', 'flap', 'double', 'loss')
+SCENS = ('baseline', 'static', 'single', 'flap', 'double', 'loss')
 SCEN = next((a for a in sys.argv[1:] if a in SCENS), 'single')
 AUTO = 'auto' in sys.argv or any(a in SCENS for a in sys.argv[1:])
 
 # (seconds after start, action, switchA, switchB)
 EVENTS = {
     'baseline': [],
+    'static':   [(5, 'down', 's1', 's2'), (13, 'up', 's1', 's2')],
     'single':   [(5, 'down', 's1', 's2'), (13, 'up', 's1', 's2')],
     'flap':     [(4, 'down', 's1', 's2'), (6, 'up', 's1', 's2'),
                  (8, 'down', 's1', 's2'), (10, 'up', 's1', 's2'),

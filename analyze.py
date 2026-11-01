@@ -4,7 +4,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
-ORDER = ['baseline', 'single', 'flap', 'double', 'loss']
+ORDER = ['baseline', 'static', 'single', 'flap', 'double', 'loss']
 rows = defaultdict(list)
 for r in csv.DictReader(open('summary.csv')):
     rows[r['scenario']].append(r)

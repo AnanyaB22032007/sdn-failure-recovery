@@ -1,3 +1,4 @@
+import os
 import time
 from ryu.base import app_manager
 from ryu.controller import ofp_event
@@ -53,6 +54,8 @@ class AdaptiveRecovery(app_manager.RyuApp):
         else:
             self.down.discard((dp.id, port))
             self.logger.info("LINK UP: s%s port %s", dp.id, port)
+        if os.environ.get("STATIC") == "1":
+            return
         new = next((n for n in ('primary', 'backup') if self.path_ok(n)), None)
         if new != self.active:
             old, self.active = self.active, new
